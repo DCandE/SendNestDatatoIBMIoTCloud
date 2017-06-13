@@ -19,8 +19,10 @@ you will need to update configuration.properties file
 	nestpassword=NestPassword
 
 
-run npm install
-and node devicetoiot.js
+run
+	npm install
+and
+	node devicetoiot.js
 
 Please node this is just a playground and not for production or anything just test purposes.
 
