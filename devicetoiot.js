@@ -151,24 +151,6 @@ client.on('close', function(msg) {
 	}
 	});
 });
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 function trimQuotes(s) {
 	if (!s || s.length === 0) {
 		return '';
@@ -180,22 +162,6 @@ function trimQuotes(s) {
 	end -= (c === '\'' || c === '"') ? 1 : 0;
 	return s.substring(start, end);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 function merge(o1, o2) {
 	o1 = o1 || {};
 	if (!o2) {
@@ -206,40 +172,9 @@ function merge(o1, o2) {
 	}
 	return o1;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 function subscribe() {
 	nest.subscribe(subscribeDone, ['shared', 'energy_latest']);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 function subscribeDone(deviceId, subdata, type) {
 	// data if set, is also stored here: nest.lastStatus.shared[thermostatID]
 	if (deviceId) {
