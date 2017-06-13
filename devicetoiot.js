@@ -25,10 +25,10 @@ properties.parse('./config.properties', {path: true}, function(err, cfg) {
   }
   macUtil.getMac(function(err, macAddress) {
     if (err) throw err;
-    var deviceId = macAddress.replace(/:/gi, '');
-    console.log('Device MAC Address: ' + deviceId);
+    var deviceMAC = macAddress.replace(/:/gi, '');
+    console.log('Device MAC Address: ' + deviceMAC);
 
-//    if(cfg.id != deviceId) {
+//    if(cfg.id != deviceMAC) {
 //    	console.warn('The device MAC address does not match the ID in the configuration file.');
 //    }
 //cfg.org = 'quickstart'; // for quickstart comment out if you have ur own org
@@ -55,7 +55,7 @@ console.log('clientId = ' + clientId);
 
     client.on('connect', function() {
 	  console.log('MQTT client connected to IBM IoT Cloud.');
-	  console.log("We are DeviceID  : "+cfg.id);
+	  console.log("We are DeviceMAC  : "+cfg.id);
 
 
 // does not work
